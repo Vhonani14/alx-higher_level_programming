@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 from sys import argv
+
 if __name__ == "__main__":
-    result = 0
-    if len(argv) == 1:
-        print("0")
+    arg_num = len(argv) - 1
+    if arg_num == 0:
+        print("{}".format(arg_num))
     else:
-        for i in range(1, len(argv)):
-            result += int(argv[i])
-            print(result)
+        result = []
+        for i in range(1, arg_num + 1):
+            result.append(int(argv[i]))
+            print("{}".format(sum(result)))
